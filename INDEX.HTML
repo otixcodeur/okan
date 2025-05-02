@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur d'idées de vidéos YouTube</title>
+    <style>
+        /* Réinitialisation de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style de la page */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Conteneur central */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style du bouton */
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style du texte de l'idée */
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Générateur d'idées de vidéos YouTube</h1>
+        <button onclick="genererIdee()">Générer une idée</button>
+        <p id="idee">Cliquez sur le bouton pour générer une idée de vidéo.</p>
+    </div>
+
+    <script>
+        // Tableau d'idées de vidéos YouTube
+        const ideesVideos = [
+            "Vlog sur ta journée à l'école",
+            "Un challenge entre amis (foot, jeux, etc.)",
+            "Un tutoriel sur la création d'une intro YouTube",
+            "Un unboxing de ta dernière acquisition",
+            "Ma routine de travail/étude",
+            "Challenge sport : essayer un nouveau sport ou activité",
+            "Les coulisses de la création d'une vidéo YouTube",
+            "Q&A avec tes abonnés",
+            "Review de ton matériel (GoPro, etc.)",
+            "Une journée dans ta vie pendant les vacances",
+            "Un défi de 24 heures (par exemple, sans écran)",
+            "Un DIY créatif pour ton décor de chambre",
+            "Faire découvrir une playlist musicale (genre Ezhel, etc.)",
+            "Vidéo style vlog avec un sujet de discussion intéressant",
+            "Comparaison de deux produits que tu utilises"
+        ];
+
+        // Fonction pour générer une idée de vidéo aléatoire
+        function genererIdee() {
+            const indexAleatoire = Math.floor(Math.random() * ideesVideos.length);
+            const idee = ideesVideos[indexAleatoire];
+            document.getElementById("idee").textContent = idee;
+        }
+    </script>
+
+</body>
+</html>
